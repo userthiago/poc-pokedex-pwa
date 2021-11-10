@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <div className="headerContainer__content">
-        <h1>Poke PWA</h1>
+        <h1>Pokédex PWA</h1>
         <Button>Recarregar</Button>
       </div>
     </HeaderContainer>
