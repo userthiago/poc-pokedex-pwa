@@ -16,6 +16,7 @@ const PokedexList: React.FC = () => {
     const pokemonListResponse = await apiPokemon
       .get('/pokemon?limit=10&offset=0')
       .then(res => res.data.results)
+      // eslint-disable-next-line no-console
       .catch(err => console.log(err));
 
     setPokemon([...pokemonListResponse]);
