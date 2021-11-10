@@ -7,14 +7,27 @@ interface PokemonItemStyledData {
 }
 
 export const PokemonItemStyled = styled.li<PokemonItemStyledData>`
+  position: relative;
   display: flex;
   align-items: center;
 
   background: ${({ type }) => typeColors[type] || typeColors.unknown};
-  height: 150px;
   border-radius: 0.4rem;
   list-style: none;
   overflow: hidden;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: var(--white-color);
+    padding: 0.2rem;
+    border-radius: 0 0 0.4rem 0;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 
   img {
     background-image: url(${BackgroundImage});
@@ -43,8 +56,7 @@ export const PokemonItemStyled = styled.li<PokemonItemStyledData>`
 
 export const PokemonAbilityList = styled.ul`
   background: var(--white-color);
-  margin-top: 0.2rem;
-  margin-right: 0.4rem;
+  margin: 0.2rem 0.4rem 0.4rem 0;
 
   padding: 0.4rem;
   border-radius: 0.4rem;

@@ -68,12 +68,11 @@ const PokemonItem: React.FC<PokemonItemProps> = ({ url, ...props }) => {
       key={pokemonData.id}
       type={pokemonData.types[0]}
     >
+      <span>#{pokemonData.id}</span>
       <img src={pokemonData.imageUrl} alt={`${pokemonData.name}`} />
 
       <div className="pokemonItem__content">
-        <p>
-          {pokemonData.name} #{pokemonData.id}
-        </p>
+        <p>{pokemonData.name}</p>
         <PokemonAbilityList>
           <h2>Abilities:</h2>
           {pokemonData.abilities.map((ability, index) => (
