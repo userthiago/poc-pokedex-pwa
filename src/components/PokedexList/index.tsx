@@ -28,13 +28,7 @@ const PokedexList: React.FC = () => {
   return (
     <ListStyled>
       {pokemon.map(pokemonUnit => {
-        return (
-          <PokemonItem
-            key={pokemonUnit.name}
-            name={pokemonUnit.name}
-            url={pokemonUnit.url}
-          />
-        );
+        return <PokemonItem key={pokemonUnit.name} url={pokemonUnit.url} />;
       })}
     </ListStyled>
   );
