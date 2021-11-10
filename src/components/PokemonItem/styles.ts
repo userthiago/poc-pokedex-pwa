@@ -34,6 +34,9 @@ export const PokemonItemStyled = styled.li<PokemonItemStyledData>`
     background-size: cover;
 
     margin: 0 0.5rem;
+
+    height: 96px;
+    width: 96px;
   }
 
   .pokemonItem__content {

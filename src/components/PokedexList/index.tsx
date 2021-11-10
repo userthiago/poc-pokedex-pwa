@@ -13,6 +13,7 @@ interface PokemonData {
 
 const PokedexList: React.FC = () => {
   const [pokemon, setPokemon] = useState<Array<PokemonData>>([]);
+  const [hasData, setHasData] = useState(true);
 
   const fetchPokemonData = async () => {
     const pokemonListResponse = await apiPokemon
@@ -21,7 +22,11 @@ const PokedexList: React.FC = () => {
       // eslint-disable-next-line no-console
       .catch(err => console.log(err));
 
-    setPokemon(oldState => [...oldState, ...pokemonListResponse]);
+    if (pokemonListResponse.length > 0) {
+      setPokemon(oldState => [...oldState, ...pokemonListResponse]);
+    } else {
+      setHasData(false);
+    }
   };
 
   useEffect(() => {
@@ -33,7 +38,7 @@ const PokedexList: React.FC = () => {
       <InfiniteScroll
         dataLength={pokemon.length}
         next={fetchPokemonData}
-        hasMore
+        hasMore={hasData}
         loader={<h4>Loading...</h4>}
       >
         {pokemon.map(pokemonUnit => {
