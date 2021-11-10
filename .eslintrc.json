@@ -5,6 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
         "airbnb"
     ],
     "parser": "@typescript-eslint/parser",
@@ -12,13 +14,51 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 13,
+        "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
+    "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint"],
     "rules": {
+      "no-use-before-define": "off",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["error"],
+      "indent": "off",
+      "no-debugger": 1,
+      "no-shadow": 0,
+      "no-undef": "off",
+      "linebreak-style": 0,
+      "operator-linebreak": "off",
+      "arrow-body-style": "off",
+      "import/prefer-default-export": "off",
+      "implicit-arrow-linebreak": "off",
+      "object-curly-newline": "off",
+      "react/jsx-curly-newline": "off",
+      "react/prop-types": "off",
+      "react/require-default-props": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+      "react/jsx-props-no-spreading": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/react-in-jsx-scope": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
 }
