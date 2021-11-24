@@ -1,14 +1,15 @@
 {
   "short_name": "Pokedex",
   "name": "Pokedex PWA",
-  "description": "xxxx",
-  "start_url" : "./",
-  "display": "standalone",
   "icons": [
     {
-      "src": "assets/img/pwa.png",
+      "src": "pwa.png",
       "sizes" : "512x512",
       "type" : "image/png"
     }
-  ]
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
