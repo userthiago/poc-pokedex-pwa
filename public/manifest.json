@@ -3,12 +3,12 @@
   "name": "Pokedex PWA",
   "icons": [
     {
-      "src": "assets/img/pokebola.png",
-      "sizes" : "360x360",
+      "src": "assets/img/pokebola-1.png",
+      "sizes" : "512x512",
       "type" : "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
